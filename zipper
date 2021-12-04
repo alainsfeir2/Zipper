@@ -1,0 +1,38 @@
+#!/bin/bash
+
+Intro="Welcome to Zipper\nBy S1ph3r\n"
+options="1.Zip folder\n2.Unzip folder\n3.Exit\n"
+
+echo -e "$Intro"
+
+start_code=0
+
+while [ $start_code -ne 9 ] 
+do
+	echo -e "$options"
+	echo "Enter option: " 
+	read user_input
+	
+	if [ $user_input -eq 1 ]
+	then
+		echo "Working Directory"
+		pwd
+		read -p "Enter file name to zip: " file_name
+		zipped="${file_name}.zip"
+		echo "Zipping result $zipped"
+		zip -r $zipped $file_name
+			
+	elif [ $user_input -eq 2 ]
+	then
+		read -p "Enter file name to unzip: " file_name
+		unzip file_name
+		
+	else
+		start_code=9
+	fi
+		
+done
+
+	
+
+
