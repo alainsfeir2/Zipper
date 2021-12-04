@@ -1,7 +1,7 @@
 # Zipper
 zip and unzip files
 
-# Setting
+## Setting
 Welcome to Zipper
 
 By S1ph3r
